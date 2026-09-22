@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastAPI 学习任务清单</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <p class="eyebrow">FastAPI + SQLite + 原生 JavaScript</p>
+        <h1>我的学习任务</h1>
+        <p class="subtitle">这个页面通过 fetch 调用 FastAPI 接口，数据会保存到 SQLite。</p>
+      </section>
+
+      <section class="card">
+        <h2>新增任务</h2>
+        <form id="task-form">
+          <label>
+            任务标题
+            <input id="title" name="title" maxlength="100" required placeholder="例如：读懂第一个 FastAPI 路由" />
+          </label>
+          <label>
+            任务说明
+            <textarea id="description" name="description" maxlength="1000" placeholder="写下你想完成的内容"></textarea>
+          </label>
+          <button type="submit">添加任务</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="list-header">
+          <h2>任务列表</h2>
+          <button id="refresh-button" class="secondary" type="button">刷新</button>
+        </div>
+        <p id="message" class="message" role="status"></p>
+        <div id="task-list" class="task-list"></div>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
+

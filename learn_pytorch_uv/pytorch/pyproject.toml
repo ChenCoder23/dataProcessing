@@ -1,0 +1,30 @@
+[project]
+name = "pytorch"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "陈会闯", email = "3135039033@qq.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+	"numpy>=2.0.0",
+	"pandas>=2.0.0",
+	"pydantic>=2.0.0",
+	"requests>=2.0.0",
+	"rich>=13.0.0",
+	"notebook>=7.6.3",
+	"torch>=2.14.0",
+]
+
+[project.scripts]
+pytorch = "pytorch:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
